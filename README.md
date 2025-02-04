@@ -44,3 +44,31 @@ my_project/
 ├── .gitignore                      # Archivos a ignorar en Git
 ├── README.md                       # Documentación del proyecto
 └── Dockerfile                      # Archivo para contenedorización (opcional)
+
+
+# Para crear una nueva rama
+git checkout -b feature/scraper develop
+git push origin feature/scraper
+
+# Para cambiar de rama 
+git checkout feature/scraper
+
+# Cuando termine de trabajar en una rama, fusionar los cambios en develop
+git checkout develop
+git merge feature/scraper
+git push origin develop
+
+# Eliminar ramas obsoletas (rama local - rama remota)
+git branch -d feature/scraper
+git push origin --delete feature/scraper
+
+# develop: Rama base para nuevas funcionalidades.
+# feature/scraper: Desarrollo del scraper.
+# feature/ml-model: Desarrollo del modelo de ML.
+# feature/web-ui: Desarrollo de la interfaz web.
+# docs/update-readme: Actualización de la documentación.
+# test/docker-integration: Pruebas de integración con Docker.
+# refactor/clean-database-code: Refactorización del código de la base de datos.
+# experiment/new-scraping-approach: Experimentación con nuevos enfoques de scraping.
+# release/v1.0.0: Preparación para la liberación de la versión 1.0.0.
+# hotfix/fix-db-connection: Corrección de errores críticos.
