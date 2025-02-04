@@ -1,12 +1,20 @@
 my_project/
 │
 ├── app/                           # Código de la aplicación web
-│   ├── _init_.py                # Inicializa la app
+│   ├── static/                    # Archivos estáticos (CSS, JS, imágenes)
+│   │   ├── css/                   # Hojas de estilo CSS
+│   │   ├── js/                    # Archivos JavaScript
+│   │   ├── images/                # Imágenes y assets visuales
+│   │   └── fonts/                 # Fuentes personalizadas (si las usas)
+│   ├── templates/                 # Plantillas HTML
+│   │   ├── base.html              # Plantilla base (layout común)
+│   │   ├── index.html             # Página principal
+│   │   ├── results.html           # Página de resultados de predicción
+│   │   └── partials/              # Fragmentos reutilizables (headers, footers, etc.)
+│   ├── _init__.py                 # Inicializa la app
 │   ├── routes.py                  # Rutas (Flask/Django)
 │   ├── views.py                   # Lógica para renderizar las páginas
-│   ├── templates/                 # Plantillas HTML (si usas Flask o Django)
-│   ├── static/                     # Archivos estáticos (CSS, JS, imágenes)
-│   ├── database/                   # Gestión de la base de datos
+│   └── database/                  # Gestión de la base de datos (backend)
 │   │   ├── _init_.py             # Inicialización
 │   │   ├── db_connector.py         # Conexión con MySQL Workbench
 │   │   ├── models.py               # Modelos de base de datos con SQLAlchemy
